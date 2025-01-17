@@ -33,8 +33,8 @@ JDBC (Java Database Connectivity) is a mechanism to connect a Java program with 
 5. **Process data from result set**
    ```java
    while (rs.next()) {
-    System.out.println(rs.getString("column_name"));
-}
+    System.out.println(rs.getString("column_name"));}
+
    
    
 6. **Close the connection**
