@@ -25,11 +25,19 @@ JDBC (Java Database Connectivity) is a mechanism to connect a Java program with 
 4. **Send and execute Query**
    ```java
    stmt.executeQuery();
+   - for modifying data
+   ``` java
    int rowsAffected = stmt.executeUpdate(); // for insert, delete, and update
+   - for retrieving data
+   ```java
+   ResultSet rs = stmt.executeQuery(); //select
    
 5. **Process data from result set**
    ```java
-   ResultSet rs = stmt.executeQuery(); //select
+   while (rs.next()) {
+    System.out.println(rs.getString("column_name"));
+}
+   
    
 6. **Close the connection**
    ```java
